@@ -60,7 +60,7 @@ const Formulario = () =>{
     }
 
     useEffect(()=>{
-        SelectCargo().then(datos => setcargo(datos)).then(valor => setLoading(valor));
+        SelectCargo().then(datos => setcargo(datos));
         SelectSexo().then(data => setsexo(data));
         SelectNacionalidad().then(data => setnacionalidad(data));
         SelectCivil().then(data => setcivil(data));
