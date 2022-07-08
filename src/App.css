@@ -1,5 +1,6 @@
 body{
     background-color: rgb(232, 232, 232);
+    
 }
 
 .formulario{
@@ -18,16 +19,40 @@ body{
     margin: 0 10%;
 }
 
+.centarlizar{
+   
+    width: 100px;
+    margin:  auto;
+    margin-bottom: 50px;
+}
+
+.b{
+    width: 30px;
+    color: black;
+    background-color: white;
+    border: none;
+
+}
+.b::hove{
+    color: white;
+    background-color: rgb(252, 49, 49);
+    border: none;
+}
+
 @media (max-width: 768px) { 
-    
+
+    .App{
+        width: 50vh;
+    }
     .formulario{
+        width: 600px;
         margin:  0 auto;
-        width: 500px;
-        align-items: center;
+        
     }
 
     .minicomponete{
         margin: 0 5%;
+        display: flex;
     }
 
  }
