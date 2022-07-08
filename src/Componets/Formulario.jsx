@@ -11,7 +11,7 @@ import SelectCivil from '../Service/SelectCivil';
 import SelectNacionalidad from '../Service/SelectNacionalidad';
 import SelectTallas from '../Service/SelectTallas';
 
-
+const laura = "hola "
 
 const Formulario = () =>{
 
