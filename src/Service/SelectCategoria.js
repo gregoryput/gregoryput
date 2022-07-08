@@ -1,6 +1,6 @@
+import axios from "axios";
 export default async function SelectCategoria(){
-   
-        const response = await fetch("https://localhost:44395/ListarLicenciasCategorias");
-        let data = await response.json();
+        const response =  await axios.get("https://localhost:44395/ListarLicenciasCategorias") 
+        const data = response.data
         return data
 }

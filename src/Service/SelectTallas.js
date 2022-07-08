@@ -1,6 +1,8 @@
+
+import axios from "axios";
 export default async function SelectTallas(){
 
-        const response = await fetch("https://localhost:44395/ListarCamisetasTallas");
-        let data = await response.json();
+        const response = await axios.get("https://localhost:44395/ListarCamisetasTallas");
+        const data = await response.data;
         return data
 }
