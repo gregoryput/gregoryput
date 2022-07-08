@@ -26,7 +26,6 @@ const Formulario = () =>{
     const Eliminarhijo = (h) => {
         
        const hijosremovido = formulario.filter((hijo)=> hijo !== h )
-       console.log(hijosremovido)
         setFormulario(hijosremovido)
       }
 
@@ -58,7 +57,8 @@ const Formulario = () =>{
     }
 
     useEffect(()=>{
-        SelectCargo().then(datos => setcargo(datos));
+
+        SelectCargo().then(datos => setcargo(datos)).then(valor => setLoading(valor));
         SelectSexo().then(data => setsexo(data));
         SelectNacionalidad().then(data => setnacionalidad(data));
         SelectCivil().then(data => setcivil(data));
@@ -68,7 +68,7 @@ const Formulario = () =>{
         SelectProvincia().then(data => setpronvincia(data));
         SelectMunicipio().then(data => setmunicipio(data));
         SelectNivelAcademico().then(data => setnivelacademico(data));
-    }, []);
+    }, [loading]);
 
     //check input
     const [checkpasaporte, setcheckpasaporte] = useState(false)

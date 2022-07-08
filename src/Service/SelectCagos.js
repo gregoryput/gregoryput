@@ -1,5 +1,12 @@
 export default async function SelectCargo(){
-    const response = await fetch("https://localhost:44395/ListarCargos");
-    const data = await response.json();
-    return data
+    const response =  await fetch("https://localhost:44395/ListarCargos") 
+        try {
+            if (response.ok) {
+                const data = await response.json();
+                return data}
+        } catch  {
+              
+        }
+            
+
 }
